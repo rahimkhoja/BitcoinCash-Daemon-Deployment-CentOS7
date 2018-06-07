@@ -39,7 +39,7 @@ mkdir /var/lib/bitcoind
 mkdir /run/bitcoind
 mkdir /etc/bitcoin
 cp ~/BCH-Deploy/etc/bitcoin/bitcoin.conf /etc/bitcoin/bitcoin.conf
-cp ~/BCH-Deploy/etc/logrotate.d/bitcoin /etc/logrotate.d/bitcoin
+cp ~/BCH-Deploy/etc/logrotate.d/bitcoind /etc/logrotate.d/bitcoind
 cp ~/BCH-Deploy/usr/lib/systemd/system/bitcoincashd.service /usr/lib/systemd/system/bitcoincashd.service
 systemctl daemon-reload
 
