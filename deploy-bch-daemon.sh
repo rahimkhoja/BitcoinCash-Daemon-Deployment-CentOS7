@@ -32,6 +32,7 @@ mkdir /var/lib/bitcoind
 mkdir /run/bitcoind
 mkdir /etc/bitcoin
 cp ~\BCH-Deploy\etc\bitcoin\bitcoin.conf \etc\bitcoin\bitcoin.conf
+cp ~\BCH-Deploy\etc\logrotate.d\bitcoin \etc\logrotate.d\bitcoin
 
 
 # From https://www.ndchost.com/wiki/how-to-install-bitcoin-on-centos-7
