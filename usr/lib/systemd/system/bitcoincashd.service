@@ -1,13 +1,9 @@
-
-# Note that almost all daemon options could be specified in
-# /etc/bitcoin/bitcoin.conf
-
 [Unit]
-Description=Bitcoin daemon
+Description=Bitcoin Cash daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/bitcoind -daemon -datadir=/var/lib/bitcoind -conf=/etc/bitcoin/bitcoin.conf -pid=/run/bitcoind/bitcoind.pid -logips -onlynet=ipv4                             
+ExecStart=/usr/bin/bitcoind -daemon -datadir=/var/lib/bitcoind -conf=/etc/bitcoin/bitcoin.conf -pid=/run/bitcoind/bitcoind.pid -logips -onlynet=ipv4
 # Creates /run/bitcoind owned by bitcoin
 RuntimeDirectory=/var/lib/bitcoind
 User=root
