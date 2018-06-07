@@ -1,7 +1,5 @@
 # BitcoinCash-Daemon-Deployment-CentOS7
 
-# NGINX-CERTBOT-CENTOS-7
-
 A simple bash script to deploy a Bitcoin Cash Daemon on CentOS 7. (BCH)
 
 
