@@ -20,20 +20,16 @@ A simple bash script to deploy a Bitcoin Cash Daemon on CentOS 7. (BCH)
 ### Features
 -------------
 
-* Installs and configures NGINX on CentOS 7.
-* Generates SSL certificates and configures NGINX to use them.
-* Automatically Renews SSL certificates generated with Certbot and LetsEncrypt.  
-* Easy to use Bash scripts. 
-* Documentation.
+* Installs and configures the Bitcoin Cash Daemon on CentOS 7.
+* Lazy Mans Documentation.
 
 
 
 ### Requirements
 -------------
 
-* Root access to a CentOS 7.* Server.
-* Port 80 and 443 on the server must be accessible from the internet.
-* The server must have a publically accessible DNS name.   
+* Root access to a CentOS 7.* Server with enough space to host the BCH blockchain. (500GB or more)
+* Internet Access.  
 
 
 
@@ -80,7 +76,7 @@ That being said, time was spent documenting each command in the scripts. This sh
 ### Useful Links
 -----------------
 
-*NGINX Example Config File:*
+*Bitcoin Cash GitHub*
 
 https://www.nginx.com/resources/wiki/start/topics/examples/full/
 
@@ -113,6 +109,6 @@ Many Bothans died getting these scripts to you, honor them by sending me some Bi
 ### License
 -----------
 
-Released under the GNU General Public License v2. (Not sure this is even valid)
+Released under the GNU General Public License v3. (Not sure this is even valid)
 
- * http://www.gnu.org/licenses/gpl-2.0.html
+ * http://www.gnu.org/licenses/gpl-3.0.html
