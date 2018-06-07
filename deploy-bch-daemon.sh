@@ -67,11 +67,15 @@ git checkout ${BITCOIN_TAG}
 make
 sudo make install
 
+# Cleanup 
 cd ~
 rm -rf bitcoin openssl
 
 sudo ln -s /opt/bitcoin-${BITCOIN_TAG}/bin/bitcoind /usr/bin/bitcoind
 sudo ln -s /opt/bitcoin-${BITCOIN_TAG}/bin/bitcoin-cli /usr/bin/bitcoin-cli
+
+# Start Bitcoin Cash Daemon on Boot
+systemctl enable bitcoincashd
 
 echo '****************************************************************'
 echo 'If there are NO ERRORS above the Bitcoin Cash Daemon is installed."
