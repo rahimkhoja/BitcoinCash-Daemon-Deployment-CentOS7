@@ -21,7 +21,8 @@ A simple bash script to deploy a Bitcoin Cash Daemon on CentOS 7. (BCH)
 -------------
 
 * Installs and configures the Bitcoin Cash Daemon on CentOS 7.
-* Lazy Mans Documentation.
+* Configures Systemd and Logrotate for use with the Bitcoin Cash Daemon.
+* Documentation.
 
 
 
@@ -36,9 +37,10 @@ A simple bash script to deploy a Bitcoin Cash Daemon on CentOS 7. (BCH)
 ### Included Files
 ------------------
 
-* NGINX Deployment and Configuration Script for CentOS 7.
-* Easy SSL Certificate and NGINX Proxy Domain Deployment Script for CentOS 7.
-* NGINX Virtual Server/Host Default Template Configuration File.   
+* Bitcoin Cash daemon deployment Bash script for CentOS 7.
+* Bitcoin Cash daemon systemD service file. 
+* Bitcoin Cash logrotate configuration file.
+* Bitcoin Cash configuration file.
 
 
 
@@ -48,8 +50,6 @@ A simple bash script to deploy a Bitcoin Cash Daemon on CentOS 7. (BCH)
 For quick deployment please ensure:
 
 * Root access to an updated CentOS 7 server. 
-* The server is internet accessable with Ports 80 and 443 open.
-* The server has a public DNS address assigned. 
 
 
 #### Step 1
