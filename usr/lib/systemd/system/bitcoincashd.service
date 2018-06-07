@@ -1,3 +1,9 @@
+#!/bin/bash
+# Bitcoin Cash SystemD Service File
+# By: Rahim Khoja ( rahim@khoja.ca )
+#
+# Requires CentOS 7.*
+
 [Unit]
 Description=Bitcoin Cash daemon
 After=network.target
