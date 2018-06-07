@@ -36,7 +36,7 @@ A simple bash script to deploy a Bitcoin Cash Daemon on CentOS 7. (BCH)
 ------------------
 
 * Bitcoin Cash daemon deployment Bash script for CentOS 7.
-* Bitcoin Cash daemon systemD service file. 
+* Bitcoin Cash daemon systemd service file. 
 * Bitcoin Cash logrotate configuration file.
 * Bitcoin Cash configuration file.
 
@@ -50,13 +50,13 @@ For quick deployment please ensure:
 * Root access to an updated CentOS 7 server. 
 
 
-#### Step 1
+#### As Root Type
 ```bash
 yum install -y git
 cd ~
-git clone https://github.ubc.ca/rkhoja/NGINX-CERTBOT-CENTOS-7.git nginx-centos7-certbot
-mv ./nginx-centos7-certbot/ /opt/
-chmod +x /opt/nginx-centos7-certbot/*.sh
+git clone https://github.com/CanadianRepublican/BitcoinCash-Daemon-Deployment-CentOS7.git BCH-Deploy
+cd BCH-Deploy
+bash deploy-bch-daemon.sh
 
 ```
 
@@ -74,22 +74,14 @@ That being said, time was spent documenting each command in the scripts. This sh
 ### Useful Links
 -----------------
 
-*Bitcoin Cash GitHub*
+*Bitcoin Cash GitHub:*
 
-https://www.nginx.com/resources/wiki/start/topics/examples/full/
+https://github.com/Bitcoin-ABC/bitcoin-abc
 
-*NGINX Proxy Configuration Documentation:*
 
-https://www.nginx.com/resources/wiki/start/topics/examples/reverseproxycachingexample/
+*Bitcoin Core Conf File Example:*
 
-*Let's Encrypt Overview:*
-
-https://letsencrypt.org/how-it-works/
-
-*Let's Encrypt Limits and Docs: Important!* (So You Don't Bang Your Head)
-
-https://letsencrypt.org/docs/rate-limits/
-
+https://github.com/bitcoin/bitcoin/blob/master/contrib/debian/examples/bitcoin.conf
 
 
 
