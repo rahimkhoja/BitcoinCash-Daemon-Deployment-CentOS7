@@ -1,4 +1,11 @@
 #!/bin/bash
+# Bitcoin Cash Deployment Script for CentOS 7
+# By: Rahim Khoja ( rahim@khoja.ca )
+#
+# Requires CentOS 7.*
+# Installs Bitcoin Cash, logrotate, firewalld, openssl, gcc 7
+#
+
 
 BITCOIN_TAG="v0.16.0"
 
