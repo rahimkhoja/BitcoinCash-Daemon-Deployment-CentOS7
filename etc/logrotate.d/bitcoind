@@ -1,0 +1,7 @@
+/var/lib/bitcoind/testnet3/debug.log /var/lib/bitcoind/debug.log {
+    daily
+    rotate 3
+    missingok
+    copytruncate
+    size 10M
+}
