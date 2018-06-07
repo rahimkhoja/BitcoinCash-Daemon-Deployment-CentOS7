@@ -31,9 +31,10 @@ systemctl start firewalld
 mkdir /var/lib/bitcoind
 mkdir /run/bitcoind
 mkdir /etc/bitcoin
-cp ~\BCH-Deploy\etc\bitcoin\bitcoin.conf \etc\bitcoin\bitcoin.conf
-cp ~\BCH-Deploy\etc\logrotate.d\bitcoin \etc\logrotate.d\bitcoin
-
+cp ~/BCH-Deploy/etc/bitcoin/bitcoin.conf /etc/bitcoin/bitcoin.conf
+cp ~/BCH-Deploy/etc/logrotate.d/bitcoin /etc/logrotate.d/bitcoin
+cp ~/BCH-Deploy/usr/lib/systemd/system/bitcoincashd.service /usr/lib/systemd/system/bitcoincashd.service
+systemctl daemon-reload
 
 # From https://www.ndchost.com/wiki/how-to-install-bitcoin-on-centos-7
 #
@@ -72,4 +73,7 @@ rm -rf bitcoin openssl
 sudo ln -s /opt/bitcoin-${BITCOIN_TAG}/bin/bitcoind /usr/bin/bitcoind
 sudo ln -s /opt/bitcoin-${BITCOIN_TAG}/bin/bitcoin-cli /usr/bin/bitcoin-cli
 
-
+echo '****************************************************************'
+echo 'If there are NO ERRORS above the Bitcoin Cash Daemon is installed."
+echo
+echo 'Reboot the system now to start the Daemon."
