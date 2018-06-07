@@ -62,7 +62,7 @@ sudo make install
 # Install GCC 7 via Yum
 yum install centos-release-scl -y    
 yum install devtoolset-7-toolchain -y
-scl enable devtoolset-7 bash
+source scl_source enable devtoolset-7
 
 # Download and compile Bitcoin Cash
 cd ~
