@@ -70,8 +70,9 @@ git clone https://github.com/Bitcoin-ABC/bitcoin-abc.git bitcoin
 cd ~/bitcoin
 git checkout ${BITCOIN_TAG}
 ./autogen.sh
-./configure --without-gui --disable-wallet --disable-tests --disable-gui-tests --disable-bench --prefix=/opt/bitcoin-${BITCOIN_TAG} PKG_CONFIG_PATH=/opt/openssl/lib/pkgconfig LIBS=-Wl,-rpath,/opt/openssl/libmake
-sudo make install
+./configure --without-gui --disable-wallet --disable-tests --disable-gui-tests --disable-bench --prefix=/opt/bitcoin-${BITCOIN_TAG} PKG_CONFIG_PATH=/opt/openssl/lib/pkgconfig LIBS=-Wl,-rpath,/opt/openssl/lib
+make
+make install
 
 # Cleanup 
 cd ~
