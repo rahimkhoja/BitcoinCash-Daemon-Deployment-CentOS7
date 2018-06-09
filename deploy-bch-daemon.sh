@@ -6,9 +6,6 @@
 # Installs Bitcoin Cash, logrotate, firewalld, openssl, gcc 7
 #
 
-
-BITCOIN_TAG="v0.16.0"
-
 # Install the EPEL repository
 yum install -y epel-release
 
@@ -68,7 +65,6 @@ source scl_source enable devtoolset-7
 cd ~
 git clone https://github.com/Bitcoin-ABC/bitcoin-abc.git bitcoin
 cd ~/bitcoin
-git checkout ${BITCOIN_TAG}
 ./autogen.sh
 ./configure --without-gui --disable-wallet --disable-tests --disable-gui-tests --disable-bench --prefix=/opt/bitcoin-${BITCOIN_TAG} PKG_CONFIG_PATH=/opt/openssl/lib/pkgconfig LIBS=-Wl,-rpath,/opt/openssl/lib
 make
@@ -78,8 +74,8 @@ make install
 cd ~
 rm -rf bitcoin openssl
 
-sudo ln -s /opt/bitcoin-${BITCOIN_TAG}/bin/bitcoind /usr/bin/bitcoind
-sudo ln -s /opt/bitcoin-${BITCOIN_TAG}/bin/bitcoin-cli /usr/bin/bitcoin-cli
+sudo ln -s /opt/bitcoin/bin/bitcoind /usr/bin/bitcoind
+sudo ln -s /opt/bitcoin/bin/bitcoin-cli /usr/bin/bitcoin-cli
 
 # Start Bitcoin Cash Daemon on Boot
 systemctl enable bitcoincashd
